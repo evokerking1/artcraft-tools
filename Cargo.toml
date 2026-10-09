@@ -1,0 +1,19 @@
+[package]
+name = "template"
+version = "0.1.0"
+edition = "2024"
+default-run = "backend"
+
+[[bin]]
+name = "backend"
+path = "./src/backend/main.rs"
+
+[dependencies]
+actix-web = { version = "4.11.0", features = ["macros"] }
+actix-rt = "2.11.0"
+serde = "1.0.226"
+serde_json = "1.0.145"
+tokio = { version = "1.47.1", features = ["rt-multi-thread", "macros"] }
+actix-cors = "0.7.1"
+colored = "3.0.0"
+dotenvy = "0.15.7"
